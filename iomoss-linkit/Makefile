@@ -15,12 +15,15 @@ define Package/iomoss-linkit
 	DEFAULT:=n
 endef
 
-define Build/Prepare
-	mkdir -p $(PKG_BUILD_DIR)
+define Build/Configure
+	true
+endef
+
+define Build/Compile
+	true
 endef
 
 define Package/iomoss-linkit/install
-	$(INSTALL_DIR) $(1)/sbin
 	$(CP) ./files/* $(1)
 endef
 
