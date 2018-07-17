@@ -1,0 +1,20 @@
+config system
+        option hostname 'iomoss-3d'
+        option timezone 'CET'
+        option ttylogin '0'
+        option log_size '64'
+        option urandom_seed '0'
+
+config timeserver 'ntp'
+        option enabled '1'
+        option enable_server '0'
+        list server '0.openwrt.pool.ntp.org'
+        list server '1.openwrt.pool.ntp.org'
+        list server '2.openwrt.pool.ntp.org'
+        list server '3.openwrt.pool.ntp.org'
+
+config led 'led_wifi'
+        option name 'wifi'
+        option sysfs 'linkit-smart-7688:orange:wifi'
+        option trigger 'phy0tpt'
+

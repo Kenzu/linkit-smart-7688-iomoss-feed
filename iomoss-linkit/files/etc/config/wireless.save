@@ -1,0 +1,22 @@
+config wifi-device 'radio0'
+dest root /
+dest ram /tmp
+dest mnt /mnt
+lists_dir ext /var/opkg-lists
+option overlay_root /overlay
+option check_signature 1
+
+        option type 'mac80211'
+        option path 'platform/10300000.wmac'
+        option disabled '0'
+        option legacy_rates '1'
+	option txpower '17'
+
+config wifi-iface 'default_radio0'
+        option device 'radio0'
+        option network 'wlan'
+        option mode 'sta'
+        option ssid 'Kondovi'
+        option encryption 'psk2'
+        option key 'stolipin'
+
