@@ -19,7 +19,7 @@ define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
 endef
 
-define Package/mtk-linkit/install
+define Package/iomoss-linkit/install
 	$(INSTALL_DIR) $(1)/sbin
 	$(CP) ./files/* $(1)
 endef
